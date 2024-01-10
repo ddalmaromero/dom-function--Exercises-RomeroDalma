@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Events Exercise</title>
+</head>
+
+<body>
+    <main>
+
+        <div class= "flex flex-col items-center mt-8" >
+            <h2 class="font-bold m-2">1. Color Change App</h2>
+            <div id="square" class="box-content h-32 w-32 p-4 border bg-gray-300 items-center">Gray</div>
+            <button class="border-2 border-black bg-yellow-400 px-8 text-lg">Change</button>
+        </div>
+        </div>
+
+
+
+
+        <div class= "flex flex-col items-center mt-8 gap-2">
+            <h2 class="font-bold m-2">2. Text Input Square</h2>
+            <div id="textSquare" class=" box-content w-48 h-48 border bg-gray-300 items-center"></div>
+            <input type="text" class="border border-black" id="textInput" placeholder="Type here..." />
+            <button onclick="deleteText()" class="border-2 border-black bg-yellow-400 px-8 text-lg">Reset</button>
+        </div>
+
+
+
+
+        <div class="flex flex-col items-center mt-8">
+            <h2 class="font-bold decoration-1 m-2">3. calculat</h2>
+
+            <form action="" id="resultBmi" class="box-content border border-black p-4 border">
+                <div class="flex flex-col w-full">
+                    <div class="flex flex-col gap-2  items-center">
+                        <h3 class="font-bold">Height</h3>
+                        <label for="heightCm">In centimetres</label>
+                        <input type="number" id="heightCm" placeholder=" cm" class="border border-black" required>
+                    </div>
+
+                    <div class="flex flex-col gap-2  items-center">
+                        <h3 class="font-bold ">Weight</h3>
+                        <label for="weightKg">In kilograms</label>
+                        <input type="number" id="weightKg" placeholder=" kg" class="border border-black" required>
+                    </div>
+
+                    <button id="buttonResult" class="flex flex-col items-center border-2 border-black bg-yellow-400 px-8 text-lg m-4">Calculater</button>
+
+                    <h3 class="font-bold flex flex-col gap-2 items-center">Result </h3>
+                    <p class="flex flex-col gap-2 items-center border border-black p-4"></p>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+        <h2 class="flex flex-col items-center font-bold decoration-2 mt-8">4.Currency Converter</h2>
+        <div class="flex flex-wrap justify-center ">
+            <div class="box-content border border-black p-6 m-4">
+                <h3 class="font-bold">Moneda Local</h3>
+                <label for="localAmount">Sin comas ni puntos</label>
+                <input type="number" id="localAmount" class="border border-black" placeholder="0">
+
+                <h3 class="font-bold">Dólares</h3>
+                <label for="localAmount">Sin comas ni puntos</label>
+                <input type="number" id="localAmount" class="border border-black" placeholder="0">
+                <div class="flex flex-wrap justify-center ">
+                    <button onclick="convertToDollars()"
+                        class="flex flex-col items-center border-2 border-black bg-yellow-400 px-8 text-lg m-4">Convert</button>
+                    <button onclick="clearInputs()"
+                        class="flex flex-col items-center border-2 border-black bg-yellow-400 px-8 text-lg m-4">Delete</button>
+                </div>
+            </div>
+
+            <div class="box-content border border-black p-6 m-4">
+                <h3 class="font-bold">Dólares</h3>
+                <label for="localAmount">Sin comas ni puntos</label>
+                <input type="number" id="localAmount" class="border border-black" placeholder="0">
+
+                <h3 class="font-bold">Moneda local</h3>
+                <label for="localAmount">Sin comas ni puntos</label>
+                <input type="number" id="localAmount" class="border border-black" placeholder="0">
+                <div class="flex flex-wrap justify-center ">
+                    <button onclick="convertToDollars()" class="flex flex-col items-center border-2 border-black bg-yellow-400 px-8 text-lg m-4">Convert</button>
+                    <button onclick="clearInputs()" class="flex flex-col items-center border-2 border-black bg-yellow-400 px-8 text-lg m-4">Delete</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
